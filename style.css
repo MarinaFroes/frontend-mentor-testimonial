@@ -1,0 +1,22 @@
+footer {
+  text-align: center;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+.icon {
+  text-decoration: none;
+  color: hsl(218, 22%, 67%);
+  padding: 1rem;
+}
+
+.icon:hover {
+  color: black;
+}
