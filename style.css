@@ -1,3 +1,56 @@
+:root {
+  --main-color: hsl(0, 0%, 100%);
+  --secondary-color: hsl(240, 18%, 77%);
+  --terciary-color: hsl(240, 38%, 20%);
+  --leight-font-weight: 300;
+  --medium-font-weight: 500;
+  --bold-font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 32px;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+.testimonial {
+  border: 2px solid red;
+}
+
+.text {
+  border: 2px solid blue;
+  font-weight: var(--leight-font-weight);
+}
+
+.user-info {
+  display: flex;
+}
+
+.name {
+  border: 2px solid pink;
+  font-size: 0.5rem;
+  font-weight: var(--bold-font-weight);
+  margin-right: 10px;
+}
+
+.role {
+  border: 2px solid green;
+  font-size: 0.5rem;
+  color: var(--secondary-color);
+  font-weight: var(--medium-font-weight);
+}
+
+/* Footer */
+
 footer {
   text-align: center;
 }
