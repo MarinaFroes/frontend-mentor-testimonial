@@ -13,6 +13,15 @@ const text = [
   }
 ];
 
+function incrementCount() {
+  return console.log("increment");
+}
+
+function decrementCount() {
+  return console.log("decrement");
+}
+
+
 (function showTestimonial(text) {
   let counter = 0;
   const testimonialContainer = document.getElementById('testimonial');
@@ -35,10 +44,28 @@ const text = [
   userRole.className = "role";
   userRole.innerText = text[counter].role;
 
+  const imageContainer = document.createElement("div");
+  imageContainer.className = "image-container";
+
+  const nextButton = document.createElement("button");
+  nextButton.className = "next-button";
+  nextButton.addEventListener("click", incrementCount);
+  
+  const previousButton = document.createElement("button");
+  previousButton.addEventListener("click", decrementCount);
+  previousButton.className = "previous-button";
+  
+  const buttonContainer = document.createElement("div");
+  buttonContainer.className = "button-container";
+  buttonContainer.append(previousButton);
+  buttonContainer.append(nextButton);
+  
   const userImage = document.createElement("img");
   userImage.className = "user-image";
   userImage.src = text[counter].imageUrl;
 
+  imageContainer.append(userImage);
+  imageContainer.append(buttonContainer);
   userInfo.append(userName);
   userInfo.append(userRole);
 
@@ -46,5 +73,5 @@ const text = [
   textContainer.append(userInfo);
 
   testimonialContainer.append(textContainer);
-  testimonialContainer.append(userImage);
+  testimonialContainer.append(imageContainer);
 })(text);
