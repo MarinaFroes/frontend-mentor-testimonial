@@ -22,8 +22,15 @@ body {
   background-color: var(--main-color);
 }
 
-.testimonial {
+.testimonial-container {
+  display: flex;
   border: 2px solid red;
+  align-items: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .text {
@@ -33,6 +40,7 @@ body {
 
 .user-info {
   display: flex;
+  border: 2px solid black;
 }
 
 .name {
@@ -47,6 +55,41 @@ body {
   font-size: 0.5rem;
   color: var(--secondary-color);
   font-weight: var(--medium-font-weight);
+}
+
+.image-container {
+  border: 2px solid red;
+  position: relative;
+}
+
+.user-image {
+  width: 10rem;
+}
+
+.button-container {
+  border: 2px solid green;
+  position: absolute;
+  bottom: 0;
+}
+
+.next-button {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 0 30px 30px 0;
+  background: #f0f0f0 url(./images/icon-next.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.previous-button {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 30px 0 0 30px;
+  background: #f0f0f0 url(./images/icon-prev.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Footer */
