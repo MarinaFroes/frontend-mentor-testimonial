@@ -15,7 +15,7 @@ const text = [
 
 let counter = 0;
 
-function incrementCount() {
+function incrementCounter() {
   if (counter < text.length) {
     counter++;
   } 
@@ -26,7 +26,7 @@ function incrementCount() {
   switchTestimonial()
 }
 
-function decrementCount() {
+function decrementCounter() {
   if (counter > 0) {
     counter--;
   } else {
@@ -79,10 +79,10 @@ function renderTestimonial() {
 
   const nextButton = document.createElement("button");
   nextButton.className = "next-button";
-  nextButton.addEventListener("click", incrementCount);
+  nextButton.addEventListener("click", incrementCounter);
 
   const previousButton = document.createElement("button");
-  previousButton.addEventListener("click", decrementCount);
+  previousButton.addEventListener("click", decrementCounter);
   previousButton.className = "previous-button";
   
   const buttonContainer = document.createElement("div");
