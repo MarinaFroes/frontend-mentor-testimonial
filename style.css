@@ -40,6 +40,7 @@ body {
   position: relative;
   border: 4px solid pink;
   margin: 1.5rem 0 0 0;
+  max-width: 800px;
 }
 
 .quote-pattern {
@@ -66,14 +67,14 @@ body {
 }
 
 .name {
-  border: 2px solid pink;
+  border: 2px solid yellow;
   font-size: 0.5rem;
   font-weight: var(--bold-font-weight);
   margin-right: 10px;
 }
 
 .role {
-  border: 2px solid green;
+  border: 2px solid lawngreen;
   font-size: 0.5rem;
   color: var(--secondary-color);
   font-weight: var(--medium-font-weight);
@@ -96,7 +97,6 @@ body {
 
 .user-image {
   width: 100%;
-  max-width: 10rem;
 }
 
 .button-container {
@@ -157,4 +157,19 @@ footer {
 
 .icon:hover {
   color: black;
+}
+
+@media only screen and (min-width: 800px){
+
+  .testimonial-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+
+  .user-info {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 0.5rem;
+  }
 }
