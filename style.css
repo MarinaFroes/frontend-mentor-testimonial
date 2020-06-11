@@ -19,28 +19,50 @@ html {
 }
 
 body {
+  position: relative;
   background-color: var(--main-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonial-container {
   display: flex;
-  border: 2px solid red;
+  flex-direction: column-reverse;
+  border: 4px solid purple;
   align-items: center;
+  padding-bottom: 3rem;
 }
 
 .text-container {
   display: flex;
   flex-direction: column;
+  position: relative;
+  border: 4px solid pink;
+  margin: 1.5rem 0 0 0;
+}
+
+.quote-pattern {
+  position: absolute;
+  height: 2rem;
+  top: -1rem;
+  left: 50%;
+  margin-left: -1rem;
 }
 
 .text {
-  border: 2px solid blue;
+  text-align: center;
+  border: 4px solid blue;
   font-weight: var(--leight-font-weight);
+  padding: 0.5rem;
+  font-size: 0.7rem;
 }
 
 .user-info {
   display: flex;
-  border: 2px solid black;
+  flex-direction: column;
+  align-items: center;
+  border: 4px solid black;
 }
 
 .name {
@@ -57,25 +79,40 @@ body {
   font-weight: var(--medium-font-weight);
 }
 
+.image-btn-container {
+  padding: 1.5rem;
+  background-image: url(./images/pattern-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 1rem;
+  border: 4px solid green;
+}
+
 .image-container {
   border: 2px solid red;
   position: relative;
 }
 
 .user-image {
-  width: 10rem;
+  width: 100%;
+  max-width: 10rem;
 }
 
 .button-container {
-  border: 2px solid green;
   position: absolute;
-  bottom: 0;
+  bottom: -0.75rem;
+  left: 50%;
+  margin-left: -1.5rem;
+}
+
+button {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
 }
 
 .next-button {
-  width: 2rem;
-  height: 2rem;
-  border: none;
   border-radius: 0 30px 30px 0;
   background: #f0f0f0 url(./images/icon-next.svg);
   background-position: center;
@@ -83,9 +120,6 @@ body {
 }
 
 .previous-button {
-  width: 2rem;
-  height: 2rem;
-  border: none;
   border-radius: 30px 0 0 30px;
   background: #f0f0f0 url(./images/icon-prev.svg);
   background-position: center;
@@ -96,11 +130,17 @@ body {
 
 footer {
   text-align: center;
+  height: 3rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: url("./images/pattern-curve.svg");
 }
 
 .attribution { 
   font-size: 11px; 
   text-align: center;
+  padding: 0.5rem;
 }
 
 .attribution a { 
@@ -108,9 +148,10 @@ footer {
 }
 
 .icon {
+  font-size: 30px; 
   text-decoration: none;
   color: hsl(218, 22%, 67%);
-  padding: 1rem;
+  padding: 0 0.5rem 0.5rem 0.5rem;
 }
 
 .icon:hover {
