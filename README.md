@@ -4,9 +4,9 @@
 - I created this landing page based on the [Frontend Mentor - Coding Bootcamp Testimonials Slider](https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL/intro) design.
 
 ## Overview
-<p align="center"><img src="./design/desktop-version.png" alt="desktop version" title="desktop version"></p>
+<p align="center"><img src="./design/desktop-layout.png" alt="desktop version" title="desktop version"></p>
 
-<p align="center"><img src="./design/mobile-version.png" alt="mobile version" title="mobile version" width="50%"></p>
+<p align="center"><img src="./design/mobile-layout.png" alt="mobile version" title="mobile version" width="50%"></p>
 
 ## Goals
 
