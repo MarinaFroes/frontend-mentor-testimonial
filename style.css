@@ -28,18 +28,21 @@ main {
   height: calc(100vh - 3rem);
   display: flex;
   justify-content: center;
-  min-height: 20rem;
+  min-height: 30rem;
 }
 
 .testimonial-container {
-  display: flex;
-  flex-direction: column-reverse;
-  border: 4px solid purple;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
   align-items: center;
-  padding-bottom: 3rem;
+  border: 4px solid purple;
+  padding-bottom: 4rem;
 }
 
 .text-container {
+  grid-column: 1;
+  grid-row: 2;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -86,6 +89,8 @@ main {
 }
 
 .image-btn-container {
+  grid-column: 1;
+  grid-row: 1;
   padding: 1.5rem;
   background-image: url(./images/pattern-bg.svg);
   background-repeat: no-repeat;
@@ -174,11 +179,39 @@ footer {
   color: black;
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 800px){
+  main {
+    min-height: 28rem;
+  }
 
   .testimonial-container {
-    flex-direction: row;
+    grid-template-columns: 3fr 1fr 3fr;
+    grid-template-rows: 1fr;
+    padding-bottom: 4rem;
+    align-items: center;
+    align-content: center;
     justify-content: center;
+  }
+
+  .image-btn-container {
+    grid-column: 2 / span 2;
+    grid-row: 1;
+    max-height: 100%;
+  }
+
+  .text-container {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    z-index: 1000;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+
+  .name,
+  .role {
+    font-size: 0.6rem;
   }
 
   .quote-pattern {
@@ -190,4 +223,21 @@ footer {
     justify-content: flex-start;
     padding-left: 0.5rem;
   }
+}
+
+@media only screen and (min-width: 1200px){
+
+  .image-btn-container {
+    padding: 2.1rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .name,
+  .role {
+    font-size: 0.7rem;
+  }
+
 }
