@@ -93,6 +93,10 @@ body {
 .image-container {
   border: 2px solid red;
   position: relative;
+  display: flex;
+  -webkit-box-shadow: 0 25px 60px -30px hsl(240, 37%, 33%);
+	-moz-box-shadow: 0 25px 60px -30px hsl(240, 37%, 33%);
+	box-shadow: 0 25px 60px -30px hsl(240, 37%, 33%);
 }
 
 .user-image {
@@ -104,6 +108,12 @@ body {
   bottom: -0.75rem;
   left: 50%;
   margin-left: -1.5rem;
+  border-radius: 30px;
+  display: flex;
+  background-color: #f0f0f0;
+  -webkit-box-shadow: 0 15px 30px -20px hsl(240, 37%, 33%);
+	-moz-box-shadow: 0 15px 30px -20px hsl(240, 37%, 33%);
+	box-shadow: 0 15px 30px -20px hsl(240, 37%, 33%);
 }
 
 button {
@@ -159,13 +169,16 @@ footer {
   color: black;
 }
 
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 600px){
 
   .testimonial-container {
     flex-direction: row;
     justify-content: center;
   }
 
+  .quote-pattern {
+    left: 20%;
+  }
 
   .user-info {
     flex-direction: row;
